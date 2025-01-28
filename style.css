@@ -6,14 +6,23 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+:root {
+    --color-primary: #7ba8cb;
+}
+
 .nav-bar {
-    background-color: #0e232eff;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
 }
 
 .brand {
@@ -22,11 +31,7 @@
     font-weight: bold;
     font-size: 20px;
     transition: all .18s ease 0s;
-    padding-left: 5px; 
-}
-
-.brand:hover {
-    color: #ff6600ff;
+    padding-left: 5px;
 }
 
 .nav-ul {
@@ -34,7 +39,7 @@
     justify-content: center;
     align-items: center;
     gap: .5em;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -51,7 +56,7 @@
 }
 
 .nav-ul li a:hover {
-    color: #ff6600ff;
+    opacity: 50%;
 }
 
 .btn {
@@ -59,7 +64,7 @@
     font-size: 15px;
     padding: 12px;
     border-radius: 5px;
-    background-color: #ff6600ff;
+    background-color: var(--color-primary);
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -67,12 +72,12 @@
 }
 
 .btn:hover {
-    box-shadow: 0 0 2.5px 4px #ff843380;
-    background-color: #f06000ff;
+    box-shadow: 0 0 2.5px 4px var(--color-primary);
+    background-color: var(--color-primary);
 }
 
 .btn:focus {
-    box-shadow: 0 0 2.5px 4px #ff660080;
+    box-shadow: 0 0 2.5px 4px var(--color-primary);
 }
 
 .btn:active {
@@ -86,6 +91,7 @@
 }
 
 .intro {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,27 +99,26 @@
 }
 
 .title {
-    color: white;
     font-weight: bolder;
     font-size: 60px;
 }
 
 .description {
-    color: white;
     font-weight: 500;
     font-size: 35px;
 }
 
 .text-img {
+    color: white;
     position: absolute;
     text-align: center;
-    padding-bottom: 100px;
+    bottom: 100px;
 }
+
 /* img */
 
 .baner {
-    width: 100%;
-    height: 450px;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -121,8 +126,8 @@
 }
 
 .img-baner {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     opacity: 50%;
 }
@@ -224,7 +229,7 @@
     font-size: 18px;
 }
 
-@media screen and (orientation: portrait){
+@media screen and (orientation: portrait) {
     .container {
         height: 100%;
     }
@@ -238,15 +243,11 @@
     }
 
     .title {
-        font-size: 80px;
+        font-size: 46px;
     }
 
-    .baner {
-        height: 350px;
-      }
-    
     .description {
-        font-size: 40.5px;
+        font-size: 23px;
     }
 
     .img-card {
@@ -256,7 +257,7 @@
     .card-title {
         font-size: 35px;
     }
-    
+
     .card-description {
         font-size: 15px;
     }
@@ -270,13 +271,13 @@
     .title {
         font-size: 50px;
     }
-    
+
     .description {
         font-size: 25px;
     }
 
     .text-card {
-        padding-left: 15px; 
+        padding-left: 15px;
     }
 }
 
@@ -297,7 +298,7 @@
     .store-title {
         font-size: 38px;
     }
-    
+
     .store-description {
         font-size: 24px;
     }
